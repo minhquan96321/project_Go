@@ -19,7 +19,7 @@ app.use(cors());
 app.use(express.json({ limit: "45mb" }));
 
 const port = process.env.PORT || 8001;
-const hostname = process.env.HOSTNAME || 8000;
+// const hostname = process.env.HOSTNAME || 8000;
 
 app.use("/api/about", aboutRouter);
 app.use("/api/categori", categoriRouter);
@@ -30,6 +30,6 @@ app.use("/api/admin", adminRouter);
 
 connection();
 
-app.listen(port, hostname, () => {
+app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
